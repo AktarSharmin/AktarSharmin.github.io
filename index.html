@@ -18,6 +18,23 @@
             padding: 20px 0;
             text-align: center;
         }
+        nav {
+            background-color: #333;
+            color: #fff;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
         .container {
             width: 80%;
             margin: 0 auto;
@@ -28,17 +45,8 @@
         h1, h2, h3 {
             color: #0073e6;
         }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
         .section {
             margin-bottom: 40px;
-        }
-        .profile-img {
-            float: left;
-            margin-right: 20px;
-            border-radius: 50%;
         }
         footer {
             background-color: #0073e6;
@@ -49,6 +57,13 @@
             width: 100%;
             bottom: 0;
         }
+        .profile-img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
     </style>
 </head>
 <body>
@@ -58,73 +73,38 @@
     <p>Ph.D. Candidate | Machine Learning | Cybersecurity | Network Security</p>
 </header>
 
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <div class="container">
-    <div class="section">
+    <div class="section" id="home">
+        <h2>Welcome to My Personal Webpage</h2>
+        <p>Explore my research, publications, and professional journey in the fields of Machine Learning, Cybersecurity, and Network Security.</p>
+    </div>
+
+    <div class="section" id="about">
         <h2>About Me</h2>
-        <img src="https://drive.google.com/file/d/1e-g82l-GPcmIKVcxeGcg_qL2CPRl1uMP/view" alt="Sharmin Aktar" class="profile-img" width="150" height="150">
+        <img src="path/to/your/profile.jpg" alt="Sharmin Aktar" class="profile-img">
         <p>Dedicated and experienced Computer Science Ph.D. candidate with a strong background in machine learning, cybersecurity, and network security. Aiming to leverage academic knowledge, research experience, and a proven track record in software engineering to contribute to innovative projects within the realm of cybersecurity and diverse Computer Science domains. Seeking opportunities to further enhance skills, collaborate with interdisciplinary teams, and make impactful contributions to the field.</p>
     </div>
 
-    <div class="section">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Ph.D. in Engineering and Applied Science</strong>, University of New Orleans, New Orleans, LA, USA (Jan 2020 - Present)</li>
-            <li><strong>M.Sc. in Computer Science</strong>, University of New Orleans, New Orleans, LA, USA (Dec 2022)</li>
-            <li><strong>Graduate Certificate - Machine Learning & AI</strong>, University of New Orleans, New Orleans, LA, USA (Dec 2022)</li>
-            <li><strong>B.Sc. in Computer Science & Engineering</strong>, Bangladesh University of Engineering & Technology, Dhaka, Bangladesh (Feb 2011 - Mar 2016)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <h3>Graduate Teaching Assistant (Instructor of Record)</h3>
-                <p>University of New Orleans (Jan 2022 - Present)</p>
-                <p>Instructed: CSCI 1581 (Software Design and Development I Lab), CSCI 1583 (Software Design and Development I), CSCI 2121 (Software Design and Development II Lab). Designed lectures, tests, assignments; graded and mentored. Received a 95% positive feedback rating from students for effective teaching methods.</p>
-            </li>
-            <li>
-                <h3>Graduate Research Assistant - UNO Cyber Center</h3>
-                <p>University of New Orleans (Jan 2020 - Present)</p>
-                <p>Developed an innovative Java-based defense against DoS/DDoS using hash-based AS traceback, halving packet requirements and boosting time efficiency while minimizing system overhead. Built a pioneering deep learning intrusion detection model with 97.58% accuracy on IDS datasets. Designed the ”DCAE-SVDD” model by merging Deep Contractive Autoencoder and Support Vector Data Description, aiming to amplify anomaly detection accuracy in IoT networks. This innovative approach showcased exceptional results across multiple datasets, strengthening IoT security.</p>
-            </li>
-            <li>
-                <h3>Software Engineer</h3>
-                <p>System Solutions Development & Technology (Sep 2016 - Dec 2019)</p>
-                <p>Designed and implemented telecom projects for Telenor Myanmar, including live voting, SMS services, and content tools. Created user-friendly solutions for telecom operators, focusing on value-added services. Managed SQL reports, developed chatbots, fixed issues, and dove into data analysis. Actively addressed and resolved customer complaints, providing 24/7 support.</p>
-            </li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Projects</h2>
+    <div class="section" id="research">
+        <h2>Research</h2>
         <ul>
             <li>Developed a contractive autoencoder-based deep learning model for intrusion detection, achieving a peak accuracy of 97.58%.</li>
             <li>Created stateful and stateless RNN models for sentiment-based text generation.</li>
             <li>Leveraged machine learning to reverse-engineer SQL queries from database memory, achieving an accuracy of 92% for MySQL and 90% for PostgreSQL.</li>
             <li>Designed a machine learning-based system to detect anomalies in robotic system logs, enhancing safety and reliability.</li>
             <li>Implemented a parallel version of the K-means clustering algorithm for intrusion detection in a big data environment.</li>
-            <li>Conducted forensic analysis using the Linux Volatility tool on various scenarios.</li>
-            <li>Performed in-depth security evaluations on servers and e-commerce platforms.</li>
-            <li>Developed a Java-based group chat application and a multiplayer game.</li>
-            <li>Created a Java-based heuristic for graph coloring, surpassing conventional methods.</li>
         </ul>
     </div>
 
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Programming Languages: Java, Python, C/C++, JavaScript, PHP, Shell script</li>
-            <li>ML Libraries: PyTorch, TensorFlow, scikit-learn, Keras, pandas</li>
-            <li>Cybersecurity Tools: Metasploit, Nessus, Nmap, Wireshark, sqlmap, Volatility, John the Ripper, Burp Suite</li>
-            <li>Big Data Tools: Apache Hadoop, Apache Spark</li>
-            <li>Databases: SQL Server, MySQL, Oracle</li>
-            <li>Networking: TCP/IP, HTTP, DNS, VPNs, firewalls</li>
-            <li>Version Control: Git</li>
-        </ul>
-    </div>
-
-    <div class="section">
+    <div class="section" id="publications">
         <h2>Publications</h2>
         <ul>
             <li>Sharmin Aktar, Abdullah Yasin Nur. Towards DDoS attack detection using deep learning approach. In: Journal of Computers & Security, June 2023.</li>
@@ -134,33 +114,7 @@
         </ul>
     </div>
 
-    <div class="section">
-        <h2>Awards & Scholarships</h2>
-        <ul>
-            <li>Women in Cybersecurity Conference Scholarship, 2023 and 2022</li>
-            <li>UNO SGA Travel Grant, 2022</li>
-            <li>Fully Funded Ph.D. Scholarship in Computer Science, University of New Orleans</li>
-            <li>CRA-WP Grad Cohort for Women, 2021</li>
-            <li>Top Ten Award, Undergrad Database Project, Department of CSE, BUET, 2014</li>
-            <li>Bangladesh Govt. Scholarships: Higher Secondary (2010) and Secondary School (2008)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Leadership & Activities</h2>
-        <ul>
-            <li>Active member of the renowned Women in CyberSecurity (WiCyS) organization.</li>
-            <li>Bangladesh Student Association, UNO: President (2022-2023) and Treasurer (2021-2022).</li>
-            <li>Presented at the University of New Orleans’s research symposium InnovateUNO 2023.</li>
-            <li>Volunteer at SUCbAUF, the 36th Annual Crawfish Boil, University of New Orleans, 2023.</li>
-            <li>Judged students’ oral and poster presentations for the University of New Orleans’s research symposium InnovateUNO 2023.</li>
-            <li>Attended the 37th Annual Leadership Retreat, organized by SIL, UNO, 2022.</li>
-            <li>Volunteer, New Student Orientation (MAMBO), UNO, 2021.</li>
-            <li>Presented at the University of New Orleans’s research symposium InnovateUNO 2021.</li>
-        </ul>
-    </div>
-
-    <div class="section">
+    <div class="section" id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:saktar@uno.edu">saktar@uno.edu</a>, <a href="mailto:saktartanni@gmail.com">saktartanni@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/saktar/">linkedin.com/in/saktar</a></p>
